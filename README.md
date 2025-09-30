@@ -1,17 +1,41 @@
 # Paper_machineLearning_project
-DataSets and Scripts related to Machine Learning ANN models
+This project contains all files used in research work "Extended method for Statistical Signal Characterization using moments
+and cumulants: Application to recognition of pattern alterations in pulse-like waveforms employing Artificial Neural Networks". 
+- DataSets.
+- Classification Learner session files.
+- Matlab scripts.
+- Trained Machine Learning models.
+- Plots
 
-# Classification Learner, session and DataSets:
-DataSets were generated and formated with App [link to project]. 
-Then imported to this project and desoredered with `shuffleDataBaseGen_<signalName>.m` script. 
-This leads in three Training dataset encapsulated in `<signalName>_workspace.mat` file.
-Classification Learner Tool Box was used to train and test different ANN models. To check this out follow the next steps
-- Load the file `<signalName>_workspace.mat` in Matlab Workspace.
-- Open Classifier Learner Tool Box and then load the respective toolbox session from workspace, for instance, 
-Sinc_30params_ClassificationLearnerSession_shuffleDataSet.mat when checking 30 parameter from Sinc signal.
-- All trained models will be listed and ready to test. First, trained model parameters are avaible as shown in figure.
-- Then, go to Test label from tool box and load different dataset to test each trained model as shown in figure.
-- Do this for every signal loading the right session at 30 or 4 params.
+## Classification Learner: Sessions and DataSets
+
+The datasets were generated and formatted using the [App Name](link to project).  
+They were then imported into this repository and randomized using the script `shuffleDataBaseGen_<signalName>.m`.  
+This process produces three training datasets for Sinc, Gauss and Chirp signal encapsulated in the files named `<signalName>_workspace.mat`.
+
+The MATLAB Classification Learner Toolbox was used to train and evaluate various artificial neural network (ANN) models.
+
+### How to Reproduce the Workflow
+
+1. **Load the workspace file**  
+   Open MATLAB and load the respective `<signalName>_workspace.mat` signal file.
+
+2. **Launch the Classification Learner Toolbox**  
+   Open the toolbox and load the corresponding session file from the workspace.  
+   For example:  
+   `Sinc_30params_ClassificationLearnerSession_shuffleDataSet.mat`  
+   (for the Sinc signal with 30 parameters)
+
+3. **Explore trained models**  
+   All trained models will be listed and ready for evaluation.  
+   Model parameters are visible as shown in the figure.
+
+4. **Test with alternate datasets**  
+   Navigate to the **Test** tab in the toolbox and load a different dataset to evaluate each trained model.  
+   This step is also illustrated in the figure.
+
+5. **Repeat for each signal**  
+   Use the appropriate session file for each signal and parameter configuration (e.g., 30 or 4 parameters).
 
 <figure>
   <p align="center">
@@ -37,16 +61,24 @@ Sinc_30params_ClassificationLearnerSession_shuffleDataSet.mat when checking 30 p
   </p>
 </figure>
 <p align="center">
-	Full Model params for Sinc, Gauss and Chirp signal trained with 30 ESSC dataset at 25dB SNR.
+	Model params calibrated for Sinc, Gauss and Chirp signal trained with 30 ESSC dataset at 25dB SNR.
 </p>
 
-# Execution Timea measure:
-To measure algorithm excecution time load to workspace `<signal-type>_<filter-deformation-type>_25dB_testElement` raw data signal 
-and `<signal-type>_exportedTrainedModels.mat` to test different models. First .mat file will load Raw signal with a filter deformation, 
-two 1x1024 element are loaded, one for amplitude and the other for time. This raw data signal is necessary
-to test "ESSC extraction feature + ANN classification" (check figure schema) excecution time. Then, with
-`timeMeasure_<signal-type>.m` script and timeit Matlab function  each processing time value represents the average of 100 algorithm
-executions.
+## Measuring Algorithm Execution Time
+
+To measure execution time, load the following files into the MATLAB workspace:
+
+- `<signal-type>_<filter-deformation-type>_25dB_testElement.mat` — raw signal data  
+- `<signal-type>_exportedTrainedModels.mat` — trained ANN models
+
+The first `.mat` file contains the raw signal with filter deformation. It loads two 1×1024 arrays: 
+one for amplitude and one for time. This raw signal is required to evaluate the execution time of 
+the **ESSC feature extraction + ANN classification** pipeline (see figure schema).
+
+Use the script:
+
+```matlab
+timeMeasure_<signal-type>.m
 
 <figure>
   <p align="center">
