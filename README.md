@@ -75,11 +75,6 @@ The first `.mat` file contains the raw signal with filter deformation. It loads 
 one for amplitude and one for time. This raw signal is required to evaluate the execution time of 
 the **ESSC feature extraction + ANN classification** pipeline (see figure schema).
 
-Use the script:
-
-```matlab
-timeMeasure_<signal-type>.m
-
 <figure>
   <p align="center">
   <img src="./Images/preprocessingAlgorithm.jpg" width="500">
@@ -88,6 +83,10 @@ timeMeasure_<signal-type>.m
 <p align="center">
 	Real Signal with filters, ESSC extraction algorithm and ANN classifier schema.
 </p>
+
+Use the matlab script:
+- `timeMeasure_<signal-type>.m` — trained ANN models
+
 
 # Ranking Features:
 
