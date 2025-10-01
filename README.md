@@ -1,5 +1,5 @@
-# Paper_machineLearning_project
-This project contains all Machine Learning training files used in the research work "Extended method for Statistical Signal Characterization using moments
+# ML-Classification-JournalSubmiss
+This project contains Machine Learning trained files used in the research work "Extended method for Statistical Signal Characterization using moments
 and cumulants: Application to recognition of pattern alterations in pulse-like waveforms employing Artificial Neural Networks". 
 - DataSets.
 - Classification Learner session files.
