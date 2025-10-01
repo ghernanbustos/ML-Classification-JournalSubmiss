@@ -103,8 +103,7 @@ It loads the following components:
 
 To rank features using the RelieFF algorithm, run the script:
 
-```matlab
-rankFeaturesV1_2.m
+- `rankFeaturesV1_2.m`
 
 
 ## File Table List:
