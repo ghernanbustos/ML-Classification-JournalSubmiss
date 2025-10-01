@@ -9,7 +9,7 @@ and cumulants: Application to recognition of pattern alterations in pulse-like w
 
 ## Classification Learner: Sessions and DataSets
 
-The datasets were generated and formatted using the [App Name](link to project).  
+The datasets were generated and formatted using the [Pulsed-LikeSignal-Generator](https://github.com/ghernanbustos/Pulsed-LikeSignal-Generator.git).  
 They were then imported into this repository and randomized using the script `shuffleDataBaseGen_<signalName>.m`.  
 This process produces three training datasets for Sinc, Gauss and Chirp signal encapsulated in the files named `<signalName>_workspace.mat`.
 
