@@ -1,18 +1,3 @@
-Repository Names ideas:
-
-- ML-Classification-JournalSubmission
-- DL-Classification-JournalSubmission
-
-- Benchmark-ML-<SignalType>-<ParamCount>
-- ESSC-ANN-Classifier
-- SignalClassification-ML-Toolkit
-- ML-FeatureExtraction-<SignalType>
-- ANN-ExecutionTime-Analysis
-- ML-Workflow-<SignalType>-<ParamCount>
-For example:
-ML-Benchmark-SincSignal-30Params-JournalSubmission
-
-
 # Paper_machineLearning_project
 This project contains all Machine Learning training files used in the research work "Extended method for Statistical Signal Characterization using moments
 and cumulants: Application to recognition of pattern alterations in pulse-like waveforms employing Artificial Neural Networks". 
@@ -129,7 +114,13 @@ and `chirp_mlp_clearner_model`. Then, run `rankFeaturesV1_2.m` to rank features 
 </p>
 
 
+## Author
 
+- Guillermo H. Bustos 	(ghernanbustos@gmail.com)
+- Héctor H. Segnorile 	(segnoh@gmail.com)
+Institution:
+Instituto de Física Enrique Gaviola (IFEG CONICET)
+Universidad Nacional de Córdoba - FAMAF
 
 
 
