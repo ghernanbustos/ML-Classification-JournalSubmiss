@@ -89,13 +89,22 @@ to calculate and plot ML computation time, where each processing time
 value represents the average of 100 algorithm executions.
 
 
-## Ranking Features:
+## Ranking Features
 
-To rank execution time, load and execute the following files:
+To rank execution time and feature relevance, load and execute the following files:
 
-In folder `<signal-type>_ann_manually>`, the ANN model was built manually using `dL_manually.m` script, with Weight and Bias obtained 
-during tranning process and tested generating Confusion Matrix to each data set (25dB, 20dB...15db). The script load `chirp_dataSets.m` 
-and `chirp_mlp_clearner_model`. Then, run `rankFeaturesV1_2.m` to rank features with RelieFF algorithm.
+Inside the folder `<signal-type>_ann_manually`, the ANN model is manually constructed using the script `dL_manually.m`.  
+This script uses weights and biases obtained during the training process, with classification learner, 
+and evaluates the model by generating a confusion matrix for each dataset (25 dB, 20 dB, 15 dB, etc.).
+
+It loads the following components:
+- `chirp_dataSets.m` — signal datasets  
+- `chirp_mlp_clearner_model` — manually defined MLP model
+
+To rank features using the RelieFF algorithm, run the script:
+
+```matlab
+rankFeaturesV1_2.m
 
 
 ## File Table List:
@@ -118,9 +127,7 @@ and `chirp_mlp_clearner_model`. Then, run `rankFeaturesV1_2.m` to rank features 
 
 - Guillermo H. Bustos 	(ghernanbustos@gmail.com)
 - Héctor H. Segnorile 	(segnoh@gmail.com)
-Institution:
-Instituto de Física Enrique Gaviola (IFEG CONICET)
-Universidad Nacional de Córdoba - FAMAF
+- **Institution**: Instituto de Física Enrique Gaviola (IFEG CONICET)- Universidad Nacional de Córdoba - FAMAF
 
 
 
