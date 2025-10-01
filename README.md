@@ -1,5 +1,20 @@
+Repository Names ideas:
+
+- ML-Classification-JournalSubmission
+- DL-Classification-JournalSubmission
+
+- Benchmark-ML-<SignalType>-<ParamCount>
+- ESSC-ANN-Classifier
+- SignalClassification-ML-Toolkit
+- ML-FeatureExtraction-<SignalType>
+- ANN-ExecutionTime-Analysis
+- ML-Workflow-<SignalType>-<ParamCount>
+For example:
+ML-Benchmark-SincSignal-30Params-JournalSubmission
+
+
 # Paper_machineLearning_project
-This project contains all files used in research work "Extended method for Statistical Signal Characterization using moments
+This project contains all Machine Learning training files used in the research work "Extended method for Statistical Signal Characterization using moments
 and cumulants: Application to recognition of pattern alterations in pulse-like waveforms employing Artificial Neural Networks". 
 - DataSets.
 - Classification Learner session files.
@@ -84,25 +99,33 @@ the **ESSC feature extraction + ANN classification** pipeline (see figure schema
 	Real Signal with filters, ESSC extraction algorithm and ANN classifier schema.
 </p>
 
-Use the matlab script:
-- `timeMeasure_<signal-type>.m` — trained ANN models
+Finally, first run the script `timeMeasure_<signal-type>.m` and then `plot_algorithm_time.m` 
+to calculate and plot ML computation time, where each processing time
+value represents the average of 100 algorithm executions.
 
 
-# Ranking Features:
+## Ranking Features:
 
-In folder `<signal-type_ann_manually>` 
+To rank execution time, load and execute the following files:
 
-# File Table List:
+In folder `<signal-type>_ann_manually>`, the ANN model was built manually using `dL_manually.m` script, with Weight and Bias obtained 
+during tranning process and tested generating Confusion Matrix to each data set (25dB, 20dB...15db). The script load `chirp_dataSets.m` 
+and `chirp_mlp_clearner_model`. Then, run `rankFeaturesV1_2.m` to rank features with RelieFF algorithm.
+
+
+## File Table List:
 
 | Folder / File              				|              Description			      |
 |-------------------------------------------------------|-----------------------------------------------------|
-| `<signal>_workspace.mat`				| Formated Datasets to be used in Classification Learner|
-| `<signal>_<num_params>params_ClassificationLearnerSession_shuffleDataSet.mat`|Classification Learner Session File|
-| `<signal>_exportedTrainedModels.mat`			| Exported Object model file     |
-| `<signal>_<filter-deformation>_25dB_testElement`	| Raw Signal data used to measure ESSC extraction feature + ANN classification execution time|	
+| `<signal>_<num_params>params_ClassificationLearnerSession_shuffleDataSet.mat`	|Classification Learner Session File (4 and 30 params)|
+| `<signal>_workspace.mat`							| Formated Datasets to be used in Classification Learner|
+| `<signal>_exportedTrainedModels.mat`						| Exported Object model file     |
+| `<signal>_<filter-deformation>_25dB_testElement`				| Raw Signal data used to measure ESSC extraction feature + ANN classification execution time|	
+|`<signal-type>_timeModelMat`							|model average execution time|
+|Folder `<signal-type>_ann_manually`						|Files to build model manually and Rank features |
 
 <p align="center">
-	Table 1: Files used in project.
+	Table: Files used in project.
 </p>
 
 
