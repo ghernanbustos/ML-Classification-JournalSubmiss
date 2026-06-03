@@ -1,0 +1,15 @@
+function [Y_pred] = net_computingTime(net, esscParams)
+    % clear OSig
+    % OSig = Metodo_ESSC_ANN();
+    % 
+    % % Sinc data signal
+    % OSig.Carga_Signal(y, x);
+    % esscMat = OSig.Obtiene_ESSC();
+    % ESSC format to Column
+    esscMat_Aux = reshape(esscParams,30,1); % Format input data for ANN model.
+    
+    % Instantiate ESSC calculator
+    % Y_pred = predict(net,esscMat_Aux') % trasponse input mat
+    Y_pred = net(esscMat_Aux');
+
+end

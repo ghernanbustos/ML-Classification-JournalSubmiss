@@ -1,0 +1,132 @@
+Command to generate the folder tree:
+C:\Users\guill\OneDrive\Escritorio\Master_ann_paper_hpo\0_PAPER_Review_ML_Traditional_ClassificationLearner>tree /A /F > folder_tree.txt
+
+
+
+Folder PATH listing for volume Windows
+Volume serial number is BABB-4FC4
+C:.
+|   Calcula_Extremos.m
+|   Calc_SSC.m
+|   Chirp_30params_ClassificationLearnerSession_shuffleDataSet.mat
+|   Chirp_4params_ClassificationLearnerSession_shuffleDataSet.mat
+|   chirp_exportedTrainedModels.mat
+|   chirp_gauss1_25dB_testElement.mat
+|   Chirp_timeModelMat.mat
+|   chirp_workspace.mat
+|   cnn_computingTime.m
+|   Extrae_Pulso_D.m
+|   Filtro0_Media.m
+|   Filtro0_Mediana.m
+|   folder_tree.txt
+|   GausstimeModelMat.mat
+|   Gauss_30params_ClassificationLearnerSession_shuffleDataSet.mat
+|   Gauss_4params_ClassificationLearnerSession_shuffleDataSet.mat
+|   gauss_exportedTrainedModels.mat
+|   gauss_exportedTrainedModels_Version2.mat
+|   gauss_gauss1_25dB_testElement.mat
+|   gauss_knn_t_measure.mat
+|   gauss_nb_t_measure.mat
+|   gauss_workspace.mat
+|   Metodo_ESSC_ANN.m
+|   plot_acc_Bis.m
+|   plot_acc_Bis2.m
+|   plot_acc_Bis_3.m
+|   plot_acc_Bis_finalpaper.m
+|   plot_acc_snr.m
+|   plot_algorithm_time.m
+|   Prueba_Obj_ESSC.m
+|   relieffMatrix.mat
+|   shuffleDataBaseGen_Chirp.m
+|   shuffleDataBaseGen_Gauss.m
+|   shuffleDataBaseGen_Sinc.m
+|   Sinc_30params_ClassLearnSess_shuffleDataSet.mat
+|   Sinc_4params_ClassLearnSess_shuffleDataSet.mat
+|   sinc_exportedTrainedModels.mat
+|   sinc_gauss1_25dB_testElement.mat
+|   Sinc_timeModelMat.mat
+|   sinc_workspace.mat
+|   tabla_chirp_old.docx
+|   tabla_gauss_old.docx
+|   tabla_sinc_old.docx
+|   timeMeasure_Chirp.m
+|   timeMeasure_Gauss.m
+|   timeMeasure_Sinc.m
+|   
++---0_plots
+|       acc_plots_ml_cnn.fig
+|       chirp_acc_plot.fig
+|       excecution_time_plot.fig
+|       gauss_acc_plot.fig
+|       hyper_params.jpg
+|       mc_4params_10db_chirp.fig
+|       mc_4params_10db_gauss.fig
+|       mc_4params_10db_sinc.fig
+|       mc_4params_15db_chirp.fig
+|       mc_4params_15db_gauss.fig
+|       mc_4params_15db_sinc.fig
+|       mc_4params_20db_chirp.fig
+|       mc_4params_20db_gauss.fig
+|       mc_4params_20db_sinc.fig
+|       mc_4params_25db_chirp.fig
+|       mc_4params_25db_gauss.fig
+|       plot_acc_Bis_finalpaper.asv
+|       sinc_acc_plot.fig
+|       
++---1_ClassLearnerSession_NoShuffle_DataSet
+|       Chirp_30params_ClassificationLearnerSession.mat
+|       Chirp_4params_ClassificationLearnerSession.mat
+|       Gauss_30params_ClassificationLearnerSession.mat
+|       Gauss_4params_ClassificationLearnerSession.mat
+|       Sinc_30params_ClassificationLearnerSession.mat
+|       Sinc_4params_ClassificationLearnerSession.mat
+|       
++---Chirp_ann_manually
+|       ChirpSensAnalysisV1_2.m
+|       chirp_dataSets.mat
+|       chirp_mlp_clearner_model.mat
+|       chirp_mlp_dl_model.mat
+|       CM_func_average.m
+|       Cálculo sensibilidad_fórmula 2.png
+|       dL_manually.m
+|       probfix.m
+|       rankFeaturesV1_2.m
+|       ReadmeFile.txt
+|       SensAuxOutput_deltaSigma.txt
+|       
++---Gauss_ann_manually
+|       CM_func_average.m
+|       Cálculo sensibilidad_fórmula 2.png
+|       dL_manually.m
+|       GaussSensAnalysisV1_2.m
+|       gauss_dataSets.mat
+|       gauss_mlp_clearner_model.mat
+|       gauss_mlp_dl_model.mat
+|       probfix.m
+|       rankFeaturesV1_2.m
+|       ReadmeFile.txt
+|       SensAuxOutput_deltaSigma.txt
+|       
+\---Sinc_ann_manually
+        CM_func_average.m
+        Cálculo sensibilidad_fórmula 2.png
+        dL_manually.m
+        probfix.m
+        rankFeaturesV1_2.asv
+        rankFeaturesV1_2.m
+        ReadmeFile.txt
+        RelieFF_rank_std_25db_traindataset_sinc.fig
+        RelieFF_test_sinc10subsetparams.mat
+        RelieFF_test_sinc15subsetparams.mat
+        RelieFF_test_sinc20subsetparams.mat
+        RelieFF_test_sinc5subsetparams.mat
+        RelieFF_train_sinc10subsetparams.mat
+        RelieFF_train_sinc15subsetparams.mat
+        RelieFF_train_sinc20subsetparams.mat
+        RelieFF_train_sinc5subsetparams.mat
+        SensAuxOutput_deltaSigma.txt
+        SincSensAnalysisV1_2.m
+        sinc_mlp_clearner_model.mat
+        sinc_mlp_dl_model.mat
+        sinc_workspace.mat
+        

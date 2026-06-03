@@ -17,8 +17,8 @@
 
 clear all, clc;
 % -------------------------------------------------------------------------
-load chirp_dataSets.mat; % DataSets
-load chirp_mlp_clearner_model.mat; % Model exporterd from Classification Learner app.
+load chirp_workspace.mat; % DataSets
+load chirp_exportedTrainedModels_BIS.mat; % Model exporterd from Classification Learner app.
 
 % Data declaration
 [n_element,n_features] = size(dataSet_chirp_30params_train25db_numberedLabel(:,1:30)); % 31 is for label
@@ -52,21 +52,21 @@ layers = [
         "Weights", W1, ...
         "Bias", b1)
 
-    reluLayer('Name', 'relu1') 
+    tanhLayer('Name', 'relu1') 
 
     fullyConnectedLayer(layer2_size, ...
         'Name', 'fc2', ...
         "Weights", W2, ...
         "Bias", b2)
 
-    reluLayer('Name', 'relu2')
+    tanhLayer('Name', 'relu2')
 
     fullyConnectedLayer(layer3_size, ...
         'Name', 'fc3', ...
         "Weights", W3, ...
         "Bias", b3) % Output layer (5 classes)
 
-    reluLayer('Name', 'relu3')
+    tanhLayer('Name', 'relu3')
 
     fullyConnectedLayer(layer4_size, ...
         'Name', 'fc4', ...
@@ -81,7 +81,9 @@ lgraph = layerGraph(layers);
 netChirp = dlnetwork(lgraph);  % Now it's ready and pretrained!
 
 save('chirp_mlp_dl_model.mat', 'netChirp'); % Save Net Object to use in other script
-
+% To check FOOTPRINT size.
+ml_compact = compact(Chirp_MLP_30ESSC_trainedModel.ClassificationNeuralNetwork)
+% 
 
 % ----------------------- Standarized Data --------------------------------
 % -------------------------------------------------------------------------
@@ -102,14 +104,14 @@ end
 % Plot CM with row and columns labled.
     classLabel = {'ND', 'G1', 'G2', 'PB1', 'PB2'};
     % Convert labels to categorical with fixed order
-    trueLabels = categorical(dataSet_chirp_30params_test25db_numberedLabel(:,31), 1:5, classLabel);
+    trueLabels = categorical(dataSet_chirp_30params_test10db_numberedLabel(:,31), 1:5, classLabel);
     predictedLabels = categorical(predictlabelmat, 1:5, classLabel);
     cm = confusionmat(trueLabels,predictedLabels) 
     % confusionchart(trueLabels, predictedLabels);
     % Plot confusion chart
         cm =confusionchart(trueLabels, predictedLabels);
         cm.FontName = 'Helvetica';     % Change font (e.g., 'Times New Roman', 'Courier New', etc.)
-        cm.FontSize = 12;          % Change font size
+        cm.FontSize = 8;          % Change font size
         % cm.Normalization = 'row-normalized';   % Optional: normalize by row
         cm.DiagonalColor = 	[0.85 0.33 0.10];         % Optional: highlight diagonal
         % cm.TextColor = 'black';                % Color of matrix numbers
