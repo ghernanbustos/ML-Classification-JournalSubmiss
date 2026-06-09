@@ -64,6 +64,15 @@ The MATLAB Classification Learner Toolbox was used to train and evaluate various
 	Model params calibrated for Sinc, Gauss and Chirp signal trained with 30 ESSC dataset at 25dB SNR.
 </p>
 
+<figure>
+  <p align="center">
+  <img src="./Images/ML_trained_Network_params.jpg" width="500">
+  </p>
+</figure>
+<p align="center">
+	Network Trained Models for 4 SSC and 30 ESSC params.
+</p>
+
 ## Measuring Algorithm Execution Time
 
 To measure execution time, load the following files into the MATLAB workspace:
@@ -88,6 +97,15 @@ Finally, first run the script `timeMeasure_<signal-type>.m` and then `plot_algor
 to calculate and plot ML computation time, where each processing time
 value represents the average of 100 algorithm executions.
 
+<figure>
+  <p align="center">
+  <img src="./Images/ml_time_stepwise.jpg" width="500">
+  </p>
+</figure>
+<p align="center">
+	Stage-wise breakdown of pre-processing and ML latency measure.
+</p>
+
 
 ## Ranking Features
 
@@ -104,6 +122,58 @@ It loads the following components:
 To rank features using the RelieFF algorithm, run the script:
 
 - `rankFeaturesV1_2.m`
+
+Accordingly the ranked features, the 5, 10, 15, 20, and 25 most relevant parameters were grouped,
+as shown Figures below. New MLP networks were trained and optimized for each subset, then applied to the
+same signal recognition examples. Trained models can be accessed following the procedure by using
+the Classification Learner Toolbox as mentioned before.
+
+<figure>
+  <p align="center">
+  <img src="./Images/RelieFF_Rank_Method.jpg" width="500">
+  </p>
+</figure>
+<p align="center">
+	RelieFF.
+</p>
+
+<figure>
+  <p align="center">
+  <img src="./Images/mRMR_Rank_Method.jpg" width="500">
+  </p>
+</figure>
+<p align="center">
+	mMRM.
+</p>
+
+Ranked Feature Subsets
+
+<figure>
+  <p align="center">
+  <img src="./Images/Sinc_ranked_subset.jpg" width="500">
+  </p>
+</figure>
+<p align="center">
+	Sinc.
+</p>
+
+<figure>
+  <p align="center">
+  <img src="./Images/Gaussian_ranked_subset.jpg" width="500">
+  </p>
+</figure>
+<p align="center">
+	Gaussian.
+</p>
+
+<figure>
+  <p align="center">
+  <img src="./Images/Chirp_ranked_subset.jpg" width="500">
+  </p>
+</figure>
+<p align="center">
+	Chirp.
+</p>
 
 
 ## File Table List:
